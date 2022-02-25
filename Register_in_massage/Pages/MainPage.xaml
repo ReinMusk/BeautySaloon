@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Register_in_massage.MainPage">
+
+    <StackLayout>
+        
+        <StackLayout>
+            <!-- <Image Source="" Margin="30"/> Засунуть картинку-->
+
+            <StackLayout Margin="40,0,40,40">
+                <Label/> <!--Название-->
+            </StackLayout>
+
+            <StackLayout Margin="40,0,40,40">
+                <Label/>
+                <!--текст-->
+            </StackLayout>
+
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" FlexLayout.AlignSelf="Start">
+            <Button CornerRadius="50" FontSize="11" Text="Продолжить" Clicked="ContinueButton_Clicked" BackgroundColor="#00B2FF"/>
+        </StackLayout>
+        
+    </StackLayout>
+
+</ContentPage>

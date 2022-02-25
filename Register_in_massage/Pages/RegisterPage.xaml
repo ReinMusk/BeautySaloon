@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Register_in_massage.RegisterPage">
+    
+    <NavigationPage.TitleView>
+        <Label Text="Регистрация" FontSize="24" TextColor="White"  Margin="50,0"/>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+
+        <StackLayout>
+            <StackLayout>
+                <Frame  Grid.Row="0" Margin="40,40,40,40"
+                    Padding="0" BorderColor="#E8E8E8">
+                    <Entry x:Name="txt_login" BackgroundColor="#E8E8E8" Placeholder="Логин" TextColor="Black" />
+                </Frame>
+
+                <Frame  Grid.Row="1" Margin="40,0,40,40"
+                    Padding="0" BorderColor="#E8E8E8" BackgroundColor="#E8E8E8">
+                    <Entry x:Name="txt_email"  Placeholder="Email" TextColor="Black"/>
+                </Frame>
+
+                <Frame  Grid.Row="2" Margin="40,0,40,40"
+                    Padding="0" BorderColor="#E8E8E8">
+                    <Entry x:Name="txt_password" BackgroundColor="#E8E8E8" IsPassword ="True" Placeholder="Пароль" TextColor="Black"/>
+                </Frame>
+
+                <Frame  Grid.Row="3" Margin="40,0,40,150"
+                    Padding="0" BorderColor="#E8E8E8">
+                    <Entry x:Name="txt_password2" BackgroundColor="#E8E8E8" IsPassword ="True" Placeholder="Пароль" TextColor="Black"/>
+                </Frame>
+
+                <Button Padding="30,0,40,0" Margin="30" Grid.Row="4" Text="Зарегистрироваться" CornerRadius="50"  Clicked="RegisterButton_Clicked" HorizontalOptions="CenterAndExpand" BackgroundColor="#00B2FF"/>
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Register_in_massage.UserPage">
+    <ContentPage.Content >
+        
+        <StackLayout >
+            
+            <Frame Margin="40,40,40,40"
+                    Padding="0">
+                <Entry x:Name="userTxt_secname" Placeholder="Фамилия" TextColor="Black"/>
+            </Frame>
+
+            <Frame Margin="40,0,40,40"
+                    Padding="0">
+                <Entry x:Name="userTxt_name" Placeholder="Имя" TextColor="Black"/>
+            </Frame>
+
+            <Frame Margin="40,0,40,150"
+                    Padding="0">
+                <Entry x:Name="userTxt_year" Placeholder="Год рождения" TextColor="Black" />
+            </Frame>
+
+            <Frame Margin="40,0,40,150"
+                    Padding="0">
+                <Entry x:Name="userTxt_mail" Placeholder="E-mail" TextColor="Black"/>
+            </Frame>
+
+            <Frame Margin="40,0,40,150"
+                    Padding="0">
+                <Entry x:Name="userTxt_password" Placeholder="Пароль" IsPassword="True" TextColor="Black"/>
+            </Frame>
+
+            <Button Padding="30,0,40,0" Margin="30" Text="Сохранить" CornerRadius="50"  Clicked="SaveButton_Clicked"/>
+            <Button Padding="30,0,40,0" Margin="30" Text="Отмена" CornerRadius="50"  Clicked="SaveButton_Clicked"/>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
