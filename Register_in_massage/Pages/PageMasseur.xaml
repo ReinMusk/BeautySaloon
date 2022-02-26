@@ -7,17 +7,17 @@
         <StackLayout>
             <Frame  Margin="40,40,40,40"
                     Padding="0" BorderColor="#E8E8E8">
-                <Entry FontFamily="FelixFont" x:Name="txt_contc_tel" BackgroundColor="#E8E8E8" Text="" Placeholder="Телефон" TextColor="Black" IsReadOnly="True"/>
+                <Entry FontFamily="FelixFont" x:Name="txt_contc_tel" BackgroundColor="#E8E8E8" Placeholder="Телефон" TextColor="Black" IsReadOnly="True"/>
             </Frame>
 
             <Frame Margin="40,0,40,40"
                     Padding="0" BorderColor="#E8E8E8">
-                <Entry  FontFamily="FelixFont" x:Name="txt_ContEmail" BackgroundColor="#E8E8E8" Text="" Placeholder="E-mail" TextColor="Black" IsReadOnly="True"/>
+                <Entry  FontFamily="FelixFont" x:Name="txt_ContEmail" BackgroundColor="#E8E8E8" Placeholder="E-mail" TextColor="Black" IsReadOnly="True"/>
             </Frame>
 
             <Frame Margin="40,0,40,150"
                     Padding="0" BorderColor="#E8E8E8">
-                <Entry FontFamily="FelixFont" x:Name="txt_ContAdress" BackgroundColor="#E8E8E8" Text="" Placeholder="Адрес" TextColor="Black" IsReadOnly="True"/>
+                <Entry FontFamily="FelixFont" x:Name="txt_ContAdress" BackgroundColor="#E8E8E8" Placeholder="Адрес" TextColor="Black" IsReadOnly="True"/>
             </Frame>
         </StackLayout>
         
