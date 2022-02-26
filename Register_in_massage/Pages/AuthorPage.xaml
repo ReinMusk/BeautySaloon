@@ -6,13 +6,13 @@
     <StackLayout>
 
         <StackLayout>
-            <StackLayout Margin="40,0,40,40">
+            <StackLayout Margin="40,200,40,40">
                 <Frame
                     Padding="0">
                     <Entry FontSize="16" x:Name="author_txt_login" BackgroundColor="#E8E8E8" TextColor="Black" Placeholder="Логин"/>
                 </Frame>
             </StackLayout>
-            <StackLayout Margin="40,0,40,40">
+            <StackLayout Margin="40,40,40,80">
                 <Frame
                     Padding="0">
                     <Entry FontSize="16" x:Name="author_txt_password" BackgroundColor="#E8E8E8" IsPassword ="True" Placeholder="Пароль" TextColor="Black"/>

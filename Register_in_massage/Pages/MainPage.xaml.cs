@@ -15,9 +15,9 @@ namespace Register_in_massage
             InitializeComponent();
         }
 
-        private void ContinueButton_Clicked(object sender, EventArgs e)
+        private async void ContinueButton_Clicked(object sender, EventArgs e)
         {
-            //сделать кнопку что бы перейти на страницу авторизации
+            await Navigation.PushAsync(new AuthorPage());
         }
     }
 }

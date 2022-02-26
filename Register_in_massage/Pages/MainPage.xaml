@@ -6,20 +6,19 @@
     <StackLayout>
         
         <StackLayout>
-            <!-- <Image Source="" Margin="30"/> Засунуть картинку-->
+            <Image Source="logo.png" Margin="30"/>
 
             <StackLayout Margin="40,0,40,40">
-                <Label/> <!--Название-->
+                <Label Text="Массаж булок" FontSize="24" HorizontalOptions="Center"/>
             </StackLayout>
 
             <StackLayout Margin="40,0,40,40">
-                <Label/>
-                <!--текст-->
+                <Label Text="Мы специализируемся на антицеллюлитном массаже. Кожа приобретает тонус, упругость и омолаживается, а жировая прослойка становится тоньше. " HorizontalOptions="Center"/>
             </StackLayout>
 
         </StackLayout>
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" FlexLayout.AlignSelf="Start">
-            <Button CornerRadius="50" FontSize="11" Text="Продолжить" Clicked="ContinueButton_Clicked" BackgroundColor="#00B2FF"/>
+            <Button CornerRadius="50" Margin="40" FontSize="17" Text="Продолжить" Clicked="ContinueButton_Clicked" BackgroundColor="#00B2FF"/>
         </StackLayout>
         
     </StackLayout>

@@ -15,6 +15,8 @@ namespace Register_in_massage
         public PageMasseur(Masseur masseur)
         {
             InitializeComponent();
+
+
         }
     }
 }

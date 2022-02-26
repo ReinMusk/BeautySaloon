@@ -20,11 +20,13 @@ namespace Register_in_massage
 
         private async void Button_Registr_Clicked(object sender, EventArgs e)
         {
-            //перенести на страницу регистрации
+            await Navigation.PushAsync(new RegisterPage());
         }
         private async void Button_Login_Clicked(object sender, EventArgs e)
         {
-            //проверка на вход и перенести на страницу массажистов
+
+
+            //await Navigation.PushAsync();
         }
     }
 }
