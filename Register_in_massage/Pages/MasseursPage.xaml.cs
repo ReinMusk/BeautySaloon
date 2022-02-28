@@ -21,7 +21,7 @@ namespace Register_in_massage
 
         protected override void OnAppearing()
         {
-            projectList.ItemsSource = App.Database.GetItems();
+            projectList.ItemsSource = App.Database.GetMasseurs();
             base.OnAppearing();
         }
 

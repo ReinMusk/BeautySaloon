@@ -17,10 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="EditMasseur.xaml">
+    <EmbeddedResource Update="Pages\EditMasseur.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="EditUser.xaml">
+    <EmbeddedResource Update="Pages\EditUser.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\MakeAppoint.xaml">
