@@ -17,7 +17,7 @@
 
                 <Frame Margin="40,0,40,30"
                    Padding="0">
-                    <Editor Text="{Binding Description}" x:Name="txt_AddSecName" Placeholder="Фамилия" TextColor="Black" />
+                    <Entry Text="{Binding SecName}" x:Name="txt_AddSecName" Placeholder="Фамилия" TextColor="Black" />
                 </Frame>
 
                 <Frame Margin="40,0,40,30"
