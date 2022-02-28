@@ -10,28 +10,26 @@ using Xamarin.Forms.Xaml;
 namespace Register_in_massage
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class RegisterPage : ContentPage
+    public partial class AddMasseur : ContentPage
     {
-        public RegisterPage()
+        public AddMasseur()
         {
             InitializeComponent();
         }
-
 
         private void Cancel(object sender, EventArgs e)
         {
             this.Navigation.PopAsync();
         }
 
-        private async void RegisterButton_Clicked(object sender, EventArgs e)
+        private void ButtonAdd_Clicked(object sender, EventArgs e)
         {
-            var usr = (User)BindingContext;
-            if (!String.IsNullOrEmpty(usr.Name))
+            Masseur ms = (Masseur)BindingContext;
+            if (!String.IsNullOrEmpty(ms.Name))
             {
-                App.Database.SaveUser(usr);
+                App.Database.SaveMasseur(ms);
             }
-
-            await this.Navigation.PopAsync();
+            this.Navigation.PopAsync();
         }
     }
 }
