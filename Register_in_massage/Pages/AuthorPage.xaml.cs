@@ -26,7 +26,7 @@ namespace Register_in_massage
         {
 
 
-            //await Navigation.PushAsync();
+            await Navigation.PushAsync(new MasseursPage());
         }
     }
 }

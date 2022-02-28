@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Register_in_massage.AddMasseur">
+             x:Class="Register_in_massage.AddMasseur"
+             NavigationPage.HasNavigationBar="False">
     
     <NavigationPage.TitleView>
         <Label Text="Добавить массажера" FontSize="24" Margin="20,0"/>

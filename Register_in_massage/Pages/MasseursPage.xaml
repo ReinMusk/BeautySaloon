@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Register_in_massage.MasseursPage">
+             x:Class="Register_in_massage.MasseursPage"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content> <!--сделать что бы был один стобец и скролл со всеми массажистами-->
 
         <StackLayout>
