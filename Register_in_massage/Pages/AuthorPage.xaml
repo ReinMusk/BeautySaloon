@@ -10,7 +10,7 @@
             <StackLayout Margin="40,250,40,30">
                 <Frame CornerRadius="15" BorderColor="Black" BackgroundColor="Bisque"
                     Padding="5">
-                    <Entry FontSize="16" x:Name="author_txt_login" TextColor="Black" PlaceholderColor="Gray" Placeholder="Логин"/>
+                    <Entry FontSize="16" x:Name="author_txt_number" TextColor="Black" PlaceholderColor="Gray" Placeholder="Номер"/>
                 </Frame>
             </StackLayout>
             <StackLayout Margin="40,40,40,80">
