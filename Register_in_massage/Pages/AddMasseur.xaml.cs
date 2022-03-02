@@ -24,11 +24,19 @@ namespace Register_in_massage
 
         private void ButtonAdd_Clicked(object sender, EventArgs e)
         {
-            Masseur ms = (Masseur)BindingContext;
-            if (!String.IsNullOrEmpty(ms.Name))
-            {
-                App.Database.SaveMasseur(ms);
-            }
+            //Masseur ms = (Masseur)BindingContext;
+            //if (!String.IsNullOrEmpty(ms.Name))
+            //{
+            //    App.Database.SaveMasseur(ms);
+            //}
+            //this.Navigation.PopAsync();
+
+            Masseur ms = new Masseur();
+            ms.Name = txt_AddName.Text;
+            ms.SecName = txt_AddSecName.Text;
+            ms.WorkExperience = Convert.ToInt32(txt_AddWork.Text);
+            ms.Number = txt_AddNum.Text;
+            App.Database.SaveMasseur(ms);
             this.Navigation.PopAsync();
         }
     }

@@ -16,5 +16,10 @@ namespace Register_in_massage
         public string Email { get; set; }
         public string Photo { get; set; }
         public int WorkExperience { get; set; }
+
+        public Masseur()
+        {
+            
+        }
     }
 }

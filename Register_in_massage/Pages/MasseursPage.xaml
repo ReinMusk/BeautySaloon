@@ -5,14 +5,15 @@
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content> <!--сделать что бы был один стобец и скролл со всеми массажистами-->
 
-        <StackLayout>
+        <StackLayout BackgroundColor="#D77B0B">
             <ListView x:Name="projectList" ItemsSource="{Binding Masseurs}" ItemSelected="OnItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.View> <!---->
-                                <StackLayout Orientation="Horizontal">
-         <!--тут сделать картинку--><Label Text="{Binding Photo}" Margin="13,0,0,0" TextColor="Black" VerticalTextAlignment="Center" FontSize="24" />
+                                <StackLayout Orientation="Horizontal" BackgroundColor="White">
+                                    <!--тут сделать картинку-->
+                                    <Label Text="{Binding Photo}" Margin="13,0,0,0" TextColor="Black" VerticalTextAlignment="Center" FontSize="24" />
                                     <Label Text="{Binding Name}" Margin="13,0,0,0" TextColor="Black" VerticalTextAlignment="Center" FontSize="24" />
                                     <Label Text="{Binding WorkExperience}" Margin="13,0,0,0" TextColor="Black" VerticalTextAlignment="Center" FontSize="24" />
                                 </StackLayout>
