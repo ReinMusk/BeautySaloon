@@ -48,6 +48,11 @@ namespace Register_in_massage
             return database.Table<Masseur>().ToList();
         }
 
+        public bool UserIsCorrect(User user)
+        {
+            return database.Get<User>(x => x.Number == user.Number && x.Password == user.Password) != null;
+        }
+
         //public Building GetBuildingByProject(Project project)
         //{
         //    return database.Get<Building>(x => x.Id == project.BuildId);

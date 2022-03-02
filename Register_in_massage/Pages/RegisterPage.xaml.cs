@@ -26,7 +26,7 @@ namespace Register_in_massage
         private async void RegisterButton_Clicked(object sender, EventArgs e)
         {
             var usr = (User)BindingContext;
-            if (!String.IsNullOrEmpty(usr.Name))
+            if (!String.IsNullOrEmpty(usr.Name) && !String.IsNullOrEmpty(usr.Number))
             {
                 App.Database.SaveUser(usr);
             }
