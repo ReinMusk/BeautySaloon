@@ -34,9 +34,9 @@ namespace Register_in_massage
         {
             return database.Get<Masseur>(id);
         }
-        public User GetUs(string number)
+        public User GetUs(int id)
         {
-            return database.Get<User>(number);
+            return database.Get<User>(id);
         }
 
         public List<User> GetUsers()
@@ -48,6 +48,21 @@ namespace Register_in_massage
             return database.Table<Masseur>().ToList();
         }
 
+        public User GetUser(string num)
+        {
+            var user = new User();
+            foreach (var item in GetUsers())
+            {
+                if (item.Number == num)
+                {
+                    user = item;
+                }
+                else
+                    user = null;
+            }
+
+            return user;
+        }
         public bool UserIsCorrect(User user)
         {
             return database.Get<User>(x => x.Number == user.Number && x.Password == user.Password) != null;

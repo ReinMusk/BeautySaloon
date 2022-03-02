@@ -27,6 +27,8 @@ namespace Register_in_massage
             var user = new User();
             user.Number = author_txt_number.Text;
             user.Password = author_txt_password.Text;
+
+            var temp = App.Database.GetUser(user.Number);
             try
             {
                 if (App.Database.UserIsCorrect(user))
