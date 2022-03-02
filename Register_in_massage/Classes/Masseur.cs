@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using SQLite;
+using Xamarin.Essentials;
 
 namespace Register_in_massage
 {
@@ -16,6 +17,7 @@ namespace Register_in_massage
         public string Email { get; set; }
         public string Photo { get; set; }
         public int WorkExperience { get; set; }
+        public string pathName { get; set; }
 
         public Masseur()
         {

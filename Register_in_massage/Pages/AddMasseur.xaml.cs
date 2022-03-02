@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
+using System.Diagnostics;
+using SQLite;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -12,6 +15,7 @@ namespace Register_in_massage
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddMasseur : ContentPage
     {
+        public string pathName;
         public AddMasseur()
         {
             InitializeComponent();
@@ -36,8 +40,22 @@ namespace Register_in_massage
             ms.SecName = txt_AddSecName.Text;
             ms.WorkExperience = Convert.ToInt32(txt_AddWork.Text);
             ms.Number = txt_AddNum.Text;
+            ms.pathName = pathName;
             App.Database.SaveMasseur(ms);
             this.Navigation.PopAsync();
+        }
+
+        private async void GetPhotoAsync(object sender, EventArgs e)
+        {
+            try
+            {
+                var photo = await MediaPicker.PickPhotoAsync();
+                pathName = photo.FullPath;
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Сообщение об ошибке", ex.Message, "OK");
+            }
         }
     }
 }

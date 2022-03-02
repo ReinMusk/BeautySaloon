@@ -32,6 +32,11 @@
                     <Entry Text="{Binding Number}" FontFamily="SourceCodePro-Medium" x:Name="txt_AddNum" Placeholder="Номер телефона" PlaceholderColor="Gray" TextColor="Black" />
                 </Frame>
 
+                <Frame Margin="40,0,40,30" CornerRadius="15" BorderColor="Black" BackgroundColor="Bisque"
+                   Padding="5">
+                    <Button Clicked="GetPhotoAsync" Text="Добавить фото" HorizontalOptions="FillAndExpand" />
+                </Frame>
+
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center"  Padding="0,30,0,0">
                     <Button BackgroundColor="Bisque" FontFamily="SourceCodePro-Medium" BorderColor="Black" BorderWidth="1" TextColor="Black" CornerRadius="50" FontSize="11" Text="Добавить" Clicked="ButtonAdd_Clicked"/>
                     <Button BackgroundColor="Bisque" FontFamily="SourceCodePro-Medium" BorderColor="Black" BorderWidth="1" TextColor="Black" CornerRadius="50" FontSize="11" Text="Отмена" Clicked="Cancel" />
