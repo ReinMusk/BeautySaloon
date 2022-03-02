@@ -24,11 +24,9 @@ namespace Register_in_massage
         }
         private async void Button_Login_Clicked(object sender, EventArgs e)
         {
-            var num = author_txt_number.Text;
-            var password = author_txt_password.Text;
             var user = new User();
-            user.Number = num;
-            user.Password = password;
+            user.Number = author_txt_number.Text;
+            user.Password = author_txt_password.Text;
             try
             {
                 if (App.Database.UserIsCorrect(user))

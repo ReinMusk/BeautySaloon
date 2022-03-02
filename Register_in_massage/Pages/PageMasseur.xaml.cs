@@ -16,6 +16,13 @@ namespace Register_in_massage
         {
             InitializeComponent();
 
+            txt_name.Text = masseur.Name + " " + masseur.SecName;
+            txt_num.Text = masseur.Number;
+
+            if (masseur.Email == null)
+                mail_frame.IsVisible = false;
+            txt_mail.Text = masseur.Email;
+            
 
         }
     }

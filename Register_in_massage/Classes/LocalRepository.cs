@@ -34,9 +34,9 @@ namespace Register_in_massage
         {
             return database.Get<Masseur>(id);
         }
-        public User GetUs(int id)
+        public User GetUs(string number)
         {
-            return database.Get<User>(id);
+            return database.Get<User>(number);
         }
 
         public List<User> GetUsers()

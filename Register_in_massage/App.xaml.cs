@@ -9,6 +9,8 @@ namespace Register_in_massage
     {
         public const string DATABASE_NAME = "RegMassage.db";
         public static LocalRepository database;
+
+        public User CurrentUser { get; set; }
         public static LocalRepository Database
         {
             get
