@@ -13,6 +13,7 @@ namespace Register_in_massage
             database = new SQLiteConnection(databasePath);
             database.CreateTable<Masseur>();
             database.CreateTable<User>();
+            database.CreateTable<Appointment>();
         }
         public int SaveUser(User usr)
         {
@@ -63,6 +64,17 @@ namespace Register_in_massage
 
             return user;
         }
+
+        public List<Appointment> GetAllAppointments()
+        {
+            return database.Table<Appointment>().ToList();
+        }
+
+        public List<Appointment> GetUserAppointments(User user)
+        {
+            return database.Table<Appointment>().Where(x => x.IdUser == user.Id).ToList();
+        }
+
         public bool UserIsCorrect(User user)
         {
             return database.Get<User>(x => x.Number == user.Number && x.Password == user.Password) != null;

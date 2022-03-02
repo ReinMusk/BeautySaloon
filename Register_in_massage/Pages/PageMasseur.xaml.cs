@@ -25,5 +25,10 @@ namespace Register_in_massage
             
 
         }
+
+        private void registry_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
