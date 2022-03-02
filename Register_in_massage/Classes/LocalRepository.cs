@@ -65,6 +65,11 @@ namespace Register_in_massage
             return user;
         }
 
+        public int SaveAppointment(Appointment app)
+        {
+            return database.Insert(app);
+        }
+
         public List<Appointment> GetAllAppointments()
         {
             return database.Table<Appointment>().ToList();

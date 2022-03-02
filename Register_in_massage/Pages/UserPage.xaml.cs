@@ -14,14 +14,19 @@ namespace Register_in_massage.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class UserPage : ContentPage
     {
-        public User CurrentUser{ get; set; }
+        public static User CurrentUser{ get; set; }
         public UserPage(User user)
         {
             InitializeComponent();
 
-            CurrentUser= user;
+            CurrentUser = user;
 
             label_title.Text = "Добро пожаловать, " + user.Name;
+        }
+
+        private async void myApps_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new UserAppointments());
         }
 
         private async void openListBtn(object sender, EventArgs e)

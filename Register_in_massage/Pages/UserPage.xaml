@@ -8,7 +8,11 @@
             <StackLayout BackgroundColor="#D77B0B">
                 <Label x:Name="label_title" Text="" HorizontalOptions="Center" FontSize="32" Margin="40" TextColor="White"></Label>
 
-                <Frame Padding="0" BorderColor="Black" CornerRadius="15" Margin="40, 450">
+                <Frame Padding="0" BorderColor="Black" CornerRadius="15" Margin="40, 400, 40, 0">
+                    <Button x:Name="myApps" Text="Мои записи" TextColor="Black" FontSize="18" BorderColor="Black" CornerRadius="15" BorderWidth="2" BackgroundColor="White" Clicked="myApps_Clicked"></Button>
+                </Frame>
+
+                <Frame Padding="0" BorderColor="Black" CornerRadius="15" Margin="40, 50, 40, 0">
                     <Button x:Name="openList" Text="Массажёры" TextColor="Black" FontSize="18" BorderColor="Black" CornerRadius="15" BorderWidth="2" BackgroundColor="White" Clicked="openListBtn"></Button>
                 </Frame>
                 
