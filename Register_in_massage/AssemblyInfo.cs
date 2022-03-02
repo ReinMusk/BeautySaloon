@@ -1,3 +1,20 @@
 using Xamarin.Forms.Xaml;
+using Xamarin.Forms;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
+[assembly: ExportFont("SourceCodePro-Black.ttf", Alias = "SourceCodePro-Black.ttf")]
+[assembly: ExportFont("SourceCodePro-BlackItalic.ttf", Alias = "SourceCodePro-BlackItalic.ttf")]
+[assembly: ExportFont("SourceCodePro-Bold.ttf", Alias = "SourceCodePro-Bold.ttf")]
+[assembly: ExportFont("SourceCodePro-BoldItalic.ttf", Alias = "SourceCodePro-BoldItalic.ttf")]
+[assembly: ExportFont("SourceCodePro-ExtraBold.ttf", Alias = "SourceCodePro-ExtraBold.ttf")]
+[assembly: ExportFont("SourceCodePro-ExtraBoldItalic.ttf", Alias = "SourceCodePro-ExtraBoldItalic.ttf")]
+[assembly: ExportFont("SourceCodePro-ExtraLight.ttf", Alias = "SourceCodePro-ExtraLight.ttf")]
+[assembly: ExportFont("SourceCodePro-ExtraLightItalic.ttf", Alias = "SourceCodePro-ExtraLightItalic.ttf")]
+[assembly: ExportFont("SourceCodePro-Light.ttf", Alias = "SourceCodePro-Light.ttf")]
+[assembly: ExportFont("SourceCodePro-Italic.ttf", Alias = "SourceCodePro-Italic.ttf")]
+[assembly: ExportFont("SourceCodePro-LightItalic.ttf", Alias = "SourceCodePro-LightItalic.ttf")]
+[assembly: ExportFont("SourceCodePro-Medium.ttf", Alias = "SourceCodePro-Medium.ttf")]
+[assembly: ExportFont("SourceCodePro-MediumItalic.ttf", Alias = "SourceCodePro-MediumItalic.ttf")]
+[assembly: ExportFont("SourceCodePro-Regular.ttf", Alias = "SourceCodePro-Regular.ttf")]
+[assembly: ExportFont("SourceCodePro-SemiBold.ttf", Alias = "SourceCodePro-SemoBold.ttf")]
+[assembly: ExportFont("SourceCodePro-SemiBoldItalic.ttf", Alias = "SourceCodePro-SemiBoldItalic.ttf")]

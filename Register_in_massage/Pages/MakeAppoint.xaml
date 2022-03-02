@@ -5,7 +5,7 @@
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="Welcome to Xamarin.Forms!" FontFamily="SourceCodePro-Medium"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>

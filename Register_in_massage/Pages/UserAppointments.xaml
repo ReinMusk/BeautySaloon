@@ -14,8 +14,8 @@
                                 <!---->
                                 <StackLayout Orientation="Horizontal" BackgroundColor="White">
                                     <!--тут сделать картинку-->
-                                    <Label Text="{Binding Time}" Margin="13,0,0,0" TextColor="Black" VerticalTextAlignment="Center" FontSize="24" />
-                                    <Label Text="{Binding IdMasseur}" Margin="13,0,0,0" TextColor="Black" VerticalTextAlignment="Center" FontSize="24" />
+                                    <Label Text="{Binding Time}" FontFamily="SourceCodePro-Medium" Margin="13,0,0,0" TextColor="Black" VerticalTextAlignment="Center" FontSize="24" />
+                                    <Label Text="{Binding IdMasseur}" FontFamily="SourceCodePro-Medium" Margin="13,0,0,0" TextColor="Black" VerticalTextAlignment="Center" FontSize="24" />
                                 </StackLayout>
                             </ViewCell.View>
                         </ViewCell>

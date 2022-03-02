@@ -14,27 +14,27 @@
                 <Label Text="Добавить массажёра" HorizontalOptions="Center" FontSize="32" Margin="40"></Label>
                 <Frame Margin="40,40,40,30" CornerRadius="15" BorderColor="Black" BackgroundColor="Bisque"
                     Padding="5">
-                    <Entry Text="{Binding Name}" x:Name="txt_AddName" Placeholder="Имя" PlaceholderColor="Gray" TextColor="Black" />
+                    <Entry Text="{Binding Name}" FontFamily="SourceCodePro-Medium" x:Name="txt_AddName" Placeholder="Имя" PlaceholderColor="Gray" TextColor="Black" />
                 </Frame>
 
                 <Frame Margin="40,0,40,30" CornerRadius="15" BorderColor="Black" BackgroundColor="Bisque"
                    Padding="5">
-                    <Entry Text="{Binding SecName}" x:Name="txt_AddSecName" Placeholder="Фамилия" PlaceholderColor="Gray" TextColor="Black" />
+                    <Entry Text="{Binding SecName}" FontFamily="SourceCodePro-Medium" x:Name="txt_AddSecName" Placeholder="Фамилия" PlaceholderColor="Gray" TextColor="Black" />
                 </Frame>
 
                 <Frame Margin="40,0,40,30" CornerRadius="15" BorderColor="Black" BackgroundColor="Bisque"
                    Padding="5">
-                    <Entry Text="{Binding WorkExperience}" x:Name="txt_AddWork" Placeholder="Опыт работы" PlaceholderColor="Gray" TextColor="Black" />
+                    <Entry Text="{Binding WorkExperience}" FontFamily="SourceCodePro-Medium" x:Name="txt_AddWork" Placeholder="Опыт работы" PlaceholderColor="Gray" TextColor="Black" />
                 </Frame>
 
                 <Frame Margin="40,0,40,30" CornerRadius="15" BorderColor="Black" BackgroundColor="Bisque"
                    Padding="5">
-                    <Entry Text="{Binding Number}" x:Name="txt_AddNum" Placeholder="Номер телефона" PlaceholderColor="Gray" TextColor="Black" />
+                    <Entry Text="{Binding Number}" FontFamily="SourceCodePro-Medium" x:Name="txt_AddNum" Placeholder="Номер телефона" PlaceholderColor="Gray" TextColor="Black" />
                 </Frame>
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center"  Padding="0,30,0,0">
-                    <Button BackgroundColor="Bisque" BorderColor="Black" BorderWidth="1" TextColor="Black" CornerRadius="50" FontSize="11" Text="Добавить" Clicked="ButtonAdd_Clicked"/>
-                    <Button BackgroundColor="Bisque" BorderColor="Black" BorderWidth="1" TextColor="Black" CornerRadius="50" FontSize="11" Text="Отмена" Clicked="Cancel" />
+                    <Button BackgroundColor="Bisque" FontFamily="SourceCodePro-Medium" BorderColor="Black" BorderWidth="1" TextColor="Black" CornerRadius="50" FontSize="11" Text="Добавить" Clicked="ButtonAdd_Clicked"/>
+                    <Button BackgroundColor="Bisque" FontFamily="SourceCodePro-Medium" BorderColor="Black" BorderWidth="1" TextColor="Black" CornerRadius="50" FontSize="11" Text="Отмена" Clicked="Cancel" />
                 </StackLayout>
             </StackLayout>
         </ScrollView>

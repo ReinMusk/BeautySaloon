@@ -10,16 +10,16 @@
             <Image Source="logo.png" Margin="30, 50"/>
 
             <StackLayout Margin="40,0,40,40">
-                <Label TextColor="Black" Text="Массаж булок" FontSize="24" HorizontalOptions="Center"/>
+                <Label TextColor="Black" FontFamily="SourceCodePro-Medium" Text="Массаж булок" FontSize="24" HorizontalOptions="Center"/>
             </StackLayout>
 
             <StackLayout Margin="40,0,40,25">
-                <Label TextColor="Gray" Text="Мы специализируемся на антицеллюлитном массаже. Кожа приобретает тонус, упругость и омолаживается, а жировая прослойка становится тоньше. " HorizontalOptions="Center"/>
+                <Label TextColor="Gray" FontFamily="SourceCodePro-Medium" Text="Мы специализируемся на антицеллюлитном массаже. Кожа приобретает тонус, упругость и омолаживается, а жировая прослойка становится тоньше. " HorizontalOptions="Center"/>
             </StackLayout>
 
         </StackLayout>
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" FlexLayout.AlignSelf="Start">
-            <Button Padding="20" CornerRadius="50" Margin="10" FontSize="17" Text="Продолжить" Clicked="ContinueButton_Clicked" BackgroundColor="#D77B0B"/>
+            <Button Padding="20" FontFamily="SourceCodePro-Medium" CornerRadius="50" Margin="10" FontSize="17" Text="Продолжить" Clicked="ContinueButton_Clicked" BackgroundColor="#D77B0B"/>
         </StackLayout>
         
     </StackLayout>

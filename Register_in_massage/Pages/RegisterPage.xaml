@@ -10,35 +10,35 @@
             <StackLayout>
                 <Frame  Grid.Row="0" Margin="40,70,40,30"
                     Padding="5" CornerRadius="15" BorderColor="Black" BackgroundColor="Bisque">
-                    <Entry Text="{Binding Name}" x:Name="txt_RegName" Placeholder="Имя" PlaceholderColor="Gray" TextColor="Black" />
+                    <Entry Text="{Binding Name}" x:Name="txt_RegName" Placeholder="Имя" PlaceholderColor="Gray" TextColor="Black" FontFamily="SourceCodePro-Medium"/>
                 </Frame>
 
                 <Frame  Grid.Row="0" Margin="40,0,40,30"
                     Padding="5" CornerRadius="15" BorderColor="Black" BackgroundColor="Bisque">
-                    <Entry Text="{Binding SecName}" x:Name="txt_RegSecName" Placeholder="Фамилия" PlaceholderColor="Gray" TextColor="Black" />
+                    <Entry Text="{Binding SecName}" x:Name="txt_RegSecName" Placeholder="Фамилия" PlaceholderColor="Gray" TextColor="Black" FontFamily="SourceCodePro-Medium"/>
                 </Frame>
 
                 <Frame  Grid.Row="0" Margin="40,0,40,30"
                     Padding="5" CornerRadius="15" BorderColor="Black" BackgroundColor="Bisque">
-                    <Entry Text="{Binding Year}" x:Name="txt_RegYear" Placeholder="Год рождения" PlaceholderColor="Gray" TextColor="Black" />
+                    <Entry Text="{Binding Year}" x:Name="txt_RegYear" Placeholder="Год рождения" PlaceholderColor="Gray" TextColor="Black" FontFamily="SourceCodePro-Medium"/>
                 </Frame>
 
                 <Frame  Grid.Row="0" Margin="40,0,40,30"
                     Padding="5" CornerRadius="15" BorderColor="Black" BackgroundColor="Bisque">
-                    <Entry Text="{Binding Number}" x:Name="txt_RegNum" Placeholder="Номер" PlaceholderColor="Gray" TextColor="Black" />
+                    <Entry Text="{Binding Number}" x:Name="txt_RegNum" Placeholder="Номер" PlaceholderColor="Gray" TextColor="Black" FontFamily="SourceCodePro-Medium"/>
                 </Frame>
 
                 <Frame  Grid.Row="0" Margin="40,0,40,30"
                     Padding="5" CornerRadius="15" BorderColor="Black" BackgroundColor="Bisque">
-                    <Entry Text="{Binding Email}" x:Name="txt_RegEmail" Placeholder="Email" PlaceholderColor="Gray" TextColor="Black" />
+                    <Entry Text="{Binding Email}" x:Name="txt_RegEmail" Placeholder="Email" PlaceholderColor="Gray" TextColor="Black" FontFamily="SourceCodePro-Medium"/>
                 </Frame>
 
                 <Frame  Grid.Row="0" Margin="40,0,40,30"
                     Padding="5" CornerRadius="15" BorderColor="Black" BackgroundColor="Bisque">
-                    <Entry Text="{Binding Password}" x:Name="txt_RegPasw" Placeholder="Пароль" PlaceholderColor="Gray" TextColor="Black" />
+                    <Entry Text="{Binding Password}" x:Name="txt_RegPasw" Placeholder="Пароль" PlaceholderColor="Gray" TextColor="Black" FontFamily="SourceCodePro-Medium"/>
                 </Frame>
 
-                <Button BorderColor="Black" BorderWidth="1" Padding="30,0,40,0" Margin="30" Grid.Row="4" Text="Зарегистрироваться" TextColor="Black" BackgroundColor="Bisque" CornerRadius="40"  Clicked="RegisterButton_Clicked"/>
+                <Button BorderColor="Black" FontFamily="SourceCodePro-Medium" BorderWidth="1" Padding="30,0,40,0" Margin="30" Grid.Row="4" Text="Зарегистрироваться" TextColor="Black" BackgroundColor="Bisque" CornerRadius="40"  Clicked="RegisterButton_Clicked"/>
             </StackLayout>
         </StackLayout>
 

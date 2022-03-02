@@ -10,19 +10,19 @@
             <StackLayout Margin="40,250,40,30">
                 <Frame CornerRadius="15" BorderColor="Black" BackgroundColor="Bisque"
                     Padding="5">
-                    <Entry FontSize="16" x:Name="author_txt_number" TextColor="Black" PlaceholderColor="Gray" Placeholder="Номер"/>
+                    <Entry FontSize="16" x:Name="author_txt_number" FontFamily="SourceCodePro-Medium" TextColor="Black" PlaceholderColor="Gray" Placeholder="Номер"/>
                 </Frame>
             </StackLayout>
             <StackLayout Margin="40,40,40,80">
                 <Frame CornerRadius="15" BorderColor="Black" BackgroundColor="Bisque"
                     Padding="5">
-                    <Entry FontSize="16" x:Name="author_txt_password" IsPassword ="True" Placeholder="Пароль" PlaceholderColor="Gray" TextColor="Black"/>
+                    <Entry FontSize="16" x:Name="author_txt_password" FontFamily="SourceCodePro-Medium" IsPassword ="True" Placeholder="Пароль" PlaceholderColor="Gray" TextColor="Black"/>
                 </Frame>
             </StackLayout>
         </StackLayout>
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" FlexLayout.AlignSelf="Start">
-            <Button BackgroundColor="Bisque" BorderColor="Black" BorderWidth="1" TextColor="Black" CornerRadius="50" FontSize="11" Text="Зарегистрироваться" Clicked="Button_Registr_Clicked"/>
-            <Button BackgroundColor="Bisque" BorderColor="Black" BorderWidth="1" TextColor="Black" CornerRadius="50" FontSize="11" Text="Войти" Clicked="Button_Login_Clicked"/>
+            <Button BackgroundColor="Bisque" FontFamily="SourceCodePro-Medium" BorderColor="Black" BorderWidth="1" TextColor="Black" CornerRadius="50" FontSize="11" Text="Зарегистрироваться" Clicked="Button_Registr_Clicked"/>
+            <Button BackgroundColor="Bisque" FontFamily="SourceCodePro-Medium" BorderColor="Black" BorderWidth="1" TextColor="Black" CornerRadius="50" FontSize="11" Text="Войти" Clicked="Button_Login_Clicked"/>
         </StackLayout>
 
     </StackLayout>
