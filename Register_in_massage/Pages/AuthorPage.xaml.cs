@@ -24,15 +24,17 @@ namespace Register_in_massage
         }
         private async void Button_Login_Clicked(object sender, EventArgs e)
         {
-            var user = new User();
-            user.Number = author_txt_number.Text;
-            user.Password = author_txt_password.Text;
+            //var user = new User();
+            //user.Number = author_txt_number.Text;
+            //user.Password = author_txt_password.Text;
 
-            var temp = App.Database.GetUser(user.Number);
+            var user = App.Database.GetUser(author_txt_number.Text);
             try
             {
-                if (App.Database.UserIsCorrect(user))
-                    await Navigation.PushAsync(new MasseursPage());
+                if (author_txt_number.Text == "admin" && author_txt_password.Text == "admin")
+                    await Navigation.PushAsync(new Pages.AdminPage());
+                else if (App.Database.UserIsCorrect(user))
+                    await Navigation.PushAsync(new Pages.UserPage(user));
             }
             catch
             {

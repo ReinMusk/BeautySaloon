@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Register_in_massage.Pages.UserPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content >
+        <ScrollView>
+            <StackLayout BackgroundColor="#D77B0B">
+                <Label x:Name="label_title" Text="" HorizontalOptions="Center" FontSize="32" Margin="40" TextColor="White"></Label>
+
+                <Frame Padding="0" BorderColor="Black" CornerRadius="15" Margin="40, 450">
+                    <Button x:Name="openList" Text="Массажёры" TextColor="Black" FontSize="18" BorderColor="Black" CornerRadius="15" BorderWidth="2" BackgroundColor="White" Clicked="openListBtn"></Button>
+                </Frame>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
