@@ -27,8 +27,6 @@ namespace Register_in_massage
             if (masseur.Email == null)
                 mail_frame.IsVisible = false;
             txt_mail.Text = masseur.Email;
-            
-
         }
 
         private void registry_Clicked(object sender, EventArgs e)
