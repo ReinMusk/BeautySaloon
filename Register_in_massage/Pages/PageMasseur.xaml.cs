@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Collections.ObjectModel;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -24,9 +26,11 @@ namespace Register_in_massage
             txt_name.Text = masseur.Name + " " + masseur.SecName;
             txt_num.Text = masseur.Number;
 
-            if (masseur.Email == null)
-                mail_frame.IsVisible = false;
+            //if (masseur.Email == null)
+            //    mail_frame.IsVisible = false;
             txt_mail.Text = masseur.Email;
+            img = new Image { Source = masseur.pathName };
+            this.BindingContext = this;
         }
 
         private void registry_Clicked(object sender, EventArgs e)

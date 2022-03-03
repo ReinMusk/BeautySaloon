@@ -21,10 +21,10 @@
                     Padding="5" CornerRadius="5" BorderColor="Black" BackgroundColor="Bisque">
                     <Entry  FontFamily="SourceCodePro-Medium" x:Name="txt_mail" BackgroundColor="#E8E8E8" Placeholder="E-mail" PlaceholderColor="Gray" TextColor="Black" IsReadOnly="True"/>
                 </Frame>
-
-                <Frame x:Name="mail_frame" Margin="40,0,40,30"
+                
+                <Frame  Margin="40,0,40,30"
                     Padding="5" CornerRadius="5" BorderColor="Black" BackgroundColor="Bisque">
-                    <Image Source="{Binding PathImage}" WidthRequest="700" HeightRequest="400"/>
+                    <Image x:Name="img" WidthRequest="700" HeightRequest="400"/>
                 </Frame>
 
                 <Label x:Name="note" Text="Запись" Margin="0, 100, 0, 0" FontFamily="SourceCodePro-Medium" FontSize="32" TextColor="White" VerticalOptions="Center" HorizontalTextAlignment="Center" ></Label>
