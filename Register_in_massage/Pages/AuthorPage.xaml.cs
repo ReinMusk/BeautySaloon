@@ -16,6 +16,8 @@ namespace Register_in_massage
         public AuthorPage()
         {
             InitializeComponent();
+
+            
         }
 
         private async void Button_Registr_Clicked(object sender, EventArgs e)
@@ -24,11 +26,8 @@ namespace Register_in_massage
         }
         private async void Button_Login_Clicked(object sender, EventArgs e)
         {
-            //var user = new User();
-            //user.Number = author_txt_number.Text;
-            //user.Password = author_txt_password.Text;
+            var user = App.Database.GetUsers().Where(x => x.Number == author_txt_number.Text && x.Password == author_txt_password.Text).FirstOrDefault();
 
-            var user = App.Database.GetUser(author_txt_number.Text);
             try
             {
                 if (author_txt_number.Text == "admin" && author_txt_password.Text == "admin")

@@ -6,15 +6,22 @@
     <ContentPage.Content >
         <ScrollView>
             <StackLayout BackgroundColor="#D77B0B">
-                <Label x:Name="label_title" Text="" FontFamily="SourceCodePro-Medium" HorizontalOptions="Center" FontSize="32" Margin="40" TextColor="White"></Label>
+                <Label x:Name="label_title" Text="" FontFamily="SourceCodePro-Medium" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="32" Margin="40" TextColor="White"></Label>
 
-                <Frame Padding="0" BorderColor="Black" CornerRadius="15" Margin="40, 350, 40, 0">
-                    <Button x:Name="myApps" Text="Мои записи" FontFamily="SourceCodePro-Medium" TextColor="Black" FontSize="18" BorderColor="Black" CornerRadius="15" BorderWidth="2" BackgroundColor="White" Clicked="myApps_Clicked"></Button>
+                <Frame Padding="0" BorderColor="Black" CornerRadius="15" Margin="40, 0, 40, 0">
+                    <Button Text="Профиль" FontFamily="SourceCodePro-Medium" TextColor="Black" FontSize="18" BorderColor="Black" CornerRadius="15" BorderWidth="2" BackgroundColor="White" Clicked="profile_Clicked"></Button>
                 </Frame>
 
-                <Frame Padding="0" BorderColor="Black" CornerRadius="15" Margin="40, 30, 40, 0">
-                    <Button x:Name="openList" Text="Массажёры" FontFamily="SourceCodePro-Medium" TextColor="Black" FontSize="18" BorderColor="Black" CornerRadius="15" BorderWidth="2" BackgroundColor="White" Clicked="openListBtn"></Button>
-                </Frame>
+                <StackLayout>
+                    <Frame Padding="0" BorderColor="Black" CornerRadius="15" Margin="40, 200, 40, 0">
+                        <Button x:Name="myApps" Text="Мои записи" FontFamily="SourceCodePro-Medium" TextColor="Black" FontSize="18" BorderColor="Black" CornerRadius="15" BorderWidth="2" BackgroundColor="White" Clicked="myApps_Clicked"></Button>
+                    </Frame>
+
+                    <Frame Padding="0" BorderColor="Black" CornerRadius="15" Margin="40, 30, 40, 0">
+                        <Button x:Name="openList" Text="Списки Салонов" FontFamily="SourceCodePro-Medium" TextColor="Black" FontSize="18" BorderColor="Black" CornerRadius="15" BorderWidth="2" BackgroundColor="White" Clicked="openListBtn"></Button>
+                    </Frame>
+                </StackLayout>
+                
                 
             </StackLayout>
         </ScrollView>

@@ -7,19 +7,38 @@
         <!--сделать что бы был один стобец и скролл со всеми массажистами-->
 
         <StackLayout BackgroundColor="#D77B0B">
-            <ListView x:Name="projectList" ItemsSource="{Binding Appointments}">
+            <Label Text="Предстоящие записи"/>
+            <ListView x:Name="projectList1" ItemsSource="{Binding newAppointments}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell>
-                            <ViewCell.View>
-                                <!---->
+                        <Grid Padding="10">
+                            <Frame BackgroundColor="White">
                                 <StackLayout Orientation="Horizontal" BackgroundColor="White">
-                                    <!--тут сделать картинку-->
+                                    <Image Source="{Binding Photo}" HeightRequest="100" WidthRequest="100"/>
                                     <Label Text="{Binding Time}" FontFamily="SourceCodePro-Medium" Margin="13,0,0,0" TextColor="Black" VerticalTextAlignment="Center" FontSize="24" />
-                                    <Label Text="{Binding IdMasseur}" FontFamily="SourceCodePro-Medium" Margin="13,0,0,0" TextColor="Black" VerticalTextAlignment="Center" FontSize="24" />
+                                    <Label Text="{Binding BeautySaloon.Name}" FontFamily="SourceCodePro-Medium" Margin="13,0,0,0" TextColor="Black" VerticalTextAlignment="Center" FontSize="24" />
+                                    <Label Text="{Binding BeautySaloon.Adress}" FontFamily="SourceCodePro-Medium" Margin="13,0,0,0" TextColor="Black" VerticalTextAlignment="Center" FontSize="24" />
                                 </StackLayout>
-                            </ViewCell.View>
-                        </ViewCell>
+                            </Frame>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Label Text="Прошлые записи записи"/>
+            <ListView x:Name="projectList2" ItemsSource="{Binding oldAppointments}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10">
+                            <Frame BackgroundColor="White">
+                                <StackLayout Orientation="Horizontal" BackgroundColor="White">
+                                    <Image Source="{Binding Photo}" HeightRequest="100" WidthRequest="100"/>
+                                    <Label Text="{Binding Time}" FontFamily="SourceCodePro-Medium" Margin="13,0,0,0" TextColor="Black" VerticalTextAlignment="Center" FontSize="24" />
+                                    <Label Text="{Binding BeautySaloon.Name}" FontFamily="SourceCodePro-Medium" Margin="13,0,0,0" TextColor="Black" VerticalTextAlignment="Center" FontSize="24" />
+                                    <Label Text="{Binding BeautySaloon.Adress}" FontFamily="SourceCodePro-Medium" Margin="13,0,0,0" TextColor="Black" VerticalTextAlignment="Center" FontSize="24" />
+                                </StackLayout>
+                            </Frame>
+                        </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

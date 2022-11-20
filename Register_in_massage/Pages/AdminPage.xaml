@@ -6,14 +6,14 @@
     <ContentPage.Content >
         <ScrollView>
             <StackLayout BackgroundColor="#D77B0B">
-                <Label x:Name="label_title" Text="Панель админа" HorizontalOptions="Center" FontSize="32" Margin="40" TextColor="White"></Label>
+                <Label x:Name="label_title" Text="Панель администратора" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="32" Margin="40" TextColor="White"></Label>
 
                 <Frame Padding="0" BorderColor="Black" CornerRadius="15" Margin="40, 380, 40, 20">
-                    <Button x:Name="showMasseursBtn" FontFamily="SourceCodePro-Medium" Text="Список массажистов" TextColor="Black" FontSize="18" BorderColor="Black" CornerRadius="15" BorderWidth="2" BackgroundColor="White" Clicked="showList"></Button>
+                    <Button FontFamily="SourceCodePro-Medium" Text="Список салонов" TextColor="Black" FontSize="18" BorderColor="Black" CornerRadius="15" BorderWidth="2" BackgroundColor="White" Clicked="showList"></Button>
                 </Frame>
 
                 <Frame Padding="0" BorderColor="Black" CornerRadius="15" Margin="40, 30">
-                    <Button x:Name="addMasseurBtn" FontFamily="SourceCodePro-Medium" Text="Добавить массажиста" TextColor="Black" FontSize="18" BorderColor="Black" CornerRadius="15" BorderWidth="2" BackgroundColor="White" Clicked="addMasseur"></Button>
+                    <Button FontFamily="SourceCodePro-Medium" Text="Добавить салон" TextColor="Black" FontSize="18" BorderColor="Black" CornerRadius="15" BorderWidth="2" BackgroundColor="White" Clicked="addSaloon"></Button>
                 </Frame>
 
             </StackLayout>

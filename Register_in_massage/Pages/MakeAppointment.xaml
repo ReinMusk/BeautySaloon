@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Register_in_massage.MakeAppointment"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#D77B0B">
+
+            <ScrollView>
+                <StackLayout>
+                    <Label x:Name="title_txt" FontFamily="SourceCodePro-Medium" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="35" Margin="40"/>
+
+
+                    <Label Text="Выберите дату" FontFamily="SourceCodePro-Medium" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="32" Margin="40"/>
+                    <Frame Margin="40,50,40,30"
+                    Padding="5" CornerRadius="5" BackgroundColor="Bisque">
+                        <DatePicker  FontFamily="SourceCodePro-Medium" x:Name="date_dp"  BackgroundColor="#E8E8E8" TextColor="Black"/>
+                    </Frame>
+
+                    <Label Text="Выберите время"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="32" Margin="40"/>
+                    <CollectionView ItemsLayout="VerticalGrid, 3"  x:Name="times_lv" ItemsSource="{Binding FreeTimes}" SelectionMode="Single" >
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Padding="10,10,10,0" RowDefinitions="Auto, *" ColumnDefinitions="Auto, *">
+                                    <Frame Margin="10" BackgroundColor="White">
+                                        <StackLayout >
+                                            <Label Text="{Binding time}" FontFamily="SourceCodePro-Medium" FontAttributes="Bold" FontSize="12" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black"/>
+                                        </StackLayout>
+                                    </Frame>
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center"  Padding="0,30,0,0">
+                        <Button BackgroundColor="Bisque" FontFamily="SourceCodePro-Medium" BorderColor="Black" BorderWidth="1" TextColor="Black" CornerRadius="50" FontSize="11" Text="Добавить" x:Name="buttonAdd" Clicked="buttonAdd_Clicked"/>
+                        <Button BackgroundColor="Bisque" FontFamily="SourceCodePro-Medium" BorderColor="Black" BorderWidth="1" TextColor="Black" CornerRadius="50" FontSize="11" Text="Отмена" Clicked="Button_cancel"/>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

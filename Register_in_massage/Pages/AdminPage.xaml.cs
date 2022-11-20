@@ -19,12 +19,12 @@ namespace Register_in_massage.Pages
 
         private async void showList(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new MasseursPage());
+            await Navigation.PushAsync(new SaloonsPage(new User() {Number = "admin" }));
         }
 
-        private async void addMasseur(object sender, EventArgs e)
+        private async void addSaloon(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AddMasseur());
+            await Navigation.PushAsync(new AddEditSaloon());
         }
     }
 }

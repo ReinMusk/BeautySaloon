@@ -12,11 +12,24 @@ namespace Register_in_massage.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class UserAppointments : ContentPage
     {
-        public UserAppointments()
+        public static List<Appointment> newAppointments { get; set; }
+
+        public static List<Appointment> oldAppointments { get; set; }
+
+        public static User user { get; set; }
+
+        public UserAppointments(User oldUser)
         {
             InitializeComponent();
 
-            projectList.ItemsSource = App.Database.GetUserAppointments(UserPage.CurrentUser);
+            user = oldUser;
+
+            newAppointments = App.Database.GetUserAppointments(user).Where(x => x.Time > DateTime.Now).ToList();
+            oldAppointments = App.Database.GetUserAppointments(user).Where(x => x.Time < DateTime.Now).ToList();
+
+            projectList1.ItemsSource = newAppointments;
+            projectList2.ItemsSource = oldAppointments;
+
             this.BindingContext = this;
             //base.OnAppearing();
         }

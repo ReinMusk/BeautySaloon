@@ -25,28 +25,37 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Pages\AddEditSaloon.xaml.cs">
+      <DependentUpon>AddEditSaloon.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\PageSaloon.xaml.cs">
+      <DependentUpon>PageSaloon.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\SaloonsPage.xaml.cs">
+      <DependentUpon>SaloonsPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Pages\MakeAppointment.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Pages\AdminPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\EditMasseur.xaml">
+    <EmbeddedResource Update="Pages\AddEditSaloon.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\EditUser.xaml">
+    <EmbeddedResource Update="Pages\ProfilePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\MakeAppoint.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Pages\AddMasseur.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Pages\MasseursPage.xaml">
+    <EmbeddedResource Update="Pages\SaloonsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\AuthorPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\PageMasseur.xaml">
+    <EmbeddedResource Update="Pages\PageSaloon.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\RegisterPage.xaml">

@@ -21,17 +21,22 @@ namespace Register_in_massage.Pages
 
             CurrentUser = user;
 
-            label_title.Text = "Добро пожаловать, " + user.Name;
+            label_title.Text = "Добро пожаловать, " + user.Name + user.SecName;
         }
 
         private async void myApps_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new UserAppointments());
+            await Navigation.PushAsync(new UserAppointments(CurrentUser));
         }
 
         private async void openListBtn(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new MasseursPage());
+            await Navigation.PushAsync(new SaloonsPage(CurrentUser));
+        }
+
+        private async void profile_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProfilePage(CurrentUser));
         }
     }
 }

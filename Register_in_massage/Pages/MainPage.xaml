@@ -10,11 +10,11 @@
             <Image Source="logo.png" Margin="30, 50"/>
 
             <StackLayout Margin="40,0,40,40">
-                <Label TextColor="Black" FontFamily="SourceCodePro-Medium" Text="Массаж булок" FontSize="24" HorizontalOptions="Center"/>
+                <Label TextColor="Black" FontFamily="SourceCodePro-Medium" Text="Территория красоты" FontSize="24" HorizontalOptions="Center"/>
             </StackLayout>
 
             <StackLayout Margin="40,0,40,25">
-                <Label TextColor="Gray" FontFamily="SourceCodePro-Medium" Text="Мы специализируемся на антицеллюлитном массаже. Кожа приобретает тонус, упругость и омолаживается, а жировая прослойка становится тоньше. " HorizontalOptions="Center"/>
+                <Label TextColor="Gray" FontFamily="SourceCodePro-Medium" Text="Лучшие салоны красоты Казани. Салоны красоты предлагают большой выбор процедур: для красоты волос и ногтей, для ухода за лицом и телом, избавление от лишнего веса, восстановление красоты и молодости кожи." HorizontalOptions="Center"/>
             </StackLayout>
 
         </StackLayout>

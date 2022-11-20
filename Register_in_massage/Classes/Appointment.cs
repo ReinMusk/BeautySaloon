@@ -13,7 +13,7 @@ namespace Register_in_massage
         public int Id { get; set; }
         public DateTime Time { get; set; }
         public int IdUser { get; set; }
-        public int IdMasseur { get; set; }
+        public int IdSaloon { get; set; }
 
         public Appointment()
         {

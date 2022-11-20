@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Register_in_massage.SaloonsPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <RefreshView Refreshing="Refresh_Refreshing" x:Name="Refresh">
+            <ScrollView>
+                <StackLayout>
+                    <CollectionView
+                x:Name="saloons_lv"
+                ItemsSource="{Binding Saloons}"
+                SelectionMode="Single" BackgroundColor="#D77B0B" SelectionChanged="OnItemSelected">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Padding="10" RowDefinitions="Auto, *" ColumnDefinitions="Auto, *">
+                                    <Frame BackgroundColor="White">
+                                        <StackLayout >
+                                            <Image Source="{Binding Photo}" HeightRequest="200" WidthRequest="300"/>
+                                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding Name}" FontSize="22" FontFamily="SourceCodePro-Medium" HorizontalTextAlignment="Start" TextColor="Black" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+                                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding Adress}" FontSize="18" FontFamily="SourceCodePro-Medium" HorizontalTextAlignment="Start" TextColor="Black" VerticalTextAlignment="Center"/>
+                                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding Description}" FontSize="14" FontFamily="SourceCodePro-Medium" HorizontalTextAlignment="Start" TextColor="Gray" VerticalTextAlignment="Center"/>
+                                            <StackLayout>
+                                                <Label Grid.Row="0" Grid.Column="0" Text="Время работы: " FontSize="19" FontFamily="SourceCodePro-Medium" HorizontalTextAlignment="Start" TextColor="Black"  VerticalTextAlignment="Center"/>
+                                                <Label Grid.Row="0" Grid.Column="0" Text="{Binding TimeStart}" FontSize="19" FontFamily="SourceCodePro-Medium" HorizontalTextAlignment="Start" TextColor="Black"  VerticalTextAlignment="Center"/>
+                                                <Label Grid.Row="0" Grid.Column="0" Text="{Binding TimeEnd}" FontSize="19" FontFamily="SourceCodePro-Medium" HorizontalTextAlignment="Start" TextColor="Black"  VerticalTextAlignment="Center"/>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </Frame>
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </StackLayout>
+            </ScrollView>
+        </RefreshView>
+    </ContentPage.Content>
+</ContentPage>

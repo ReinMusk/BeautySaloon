@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Register_in_massage.AddEditSaloon"
+             NavigationPage.HasNavigationBar="False">
+    
+    <NavigationPage.TitleView>
+        <Label FontSize="24" Margin="20,0"/>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content >
+        <ScrollView>
+            <StackLayout BackgroundColor="#D77B0B">
+                <Label x:Name="title_txt"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="32" Margin="40"/>
+                <Frame Margin="40,40,40,30" CornerRadius="15" BorderColor="Black" BackgroundColor="Bisque"
+                    Padding="5">
+                    <Entry Text="{Binding Name}" FontFamily="SourceCodePro-Medium" x:Name="txt_AddName" Placeholder="Название" PlaceholderColor="Gray" TextColor="Black" />
+                </Frame>
+
+                <Frame Margin="40,0,40,30" CornerRadius="15" BorderColor="Black" BackgroundColor="Bisque"
+                   Padding="5">
+                    <Entry Text="{Binding Number}" FontFamily="SourceCodePro-Medium" x:Name="txt_AddNum" Placeholder="Номер телефона" PlaceholderColor="Gray" TextColor="Black" />
+                </Frame>
+
+                <Frame Margin="40,0,40,30" CornerRadius="15" BorderColor="Black" BackgroundColor="Bisque"
+                   Padding="5">
+                    <Editor Text="{Binding Description}" FontFamily="SourceCodePro-Medium" x:Name="txt_AddDesc" Placeholder="Описание" PlaceholderColor="Gray" TextColor="Black"/>
+                </Frame>
+
+                <Frame Margin="40,0,40,30" CornerRadius="15" BorderColor="Black" BackgroundColor="Bisque"
+                   Padding="5">
+                    <Entry Text="{Binding Adress}" FontFamily="SourceCodePro-Medium" x:Name="txt_AddAdress" Placeholder="Адрес" PlaceholderColor="Gray" TextColor="Black" />
+                </Frame>
+
+                <Frame Margin="40,0,40,30" CornerRadius="15" BorderColor="Black" BackgroundColor="Bisque"
+                   Padding="5">
+                    <TimePicker Time="{Binding TimeStart}" FontFamily="SourceCodePro-Medium" x:Name="txt_AddTimeStart" TextColor="Black" />
+                </Frame>
+
+                <Frame Margin="40,0,40,30" CornerRadius="15" BorderColor="Black" BackgroundColor="Bisque"
+                   Padding="5">
+                    <TimePicker Time="{Binding TimeEnd}" FontFamily="SourceCodePro-Medium" x:Name="txt_AddTimeEnd" TextColor="Black" />
+                </Frame>
+
+                <Frame Margin="40,0,40,30" CornerRadius="15" BorderColor="Black" BackgroundColor="Bisque"
+                   Padding="5">
+                    <Button BackgroundColor="Bisque" TextColor="Gray" Clicked="GetPhotoAsync" Text="Фото" HorizontalOptions="FillAndExpand" />
+                </Frame>
+
+                <Frame Margin="40,0,40,30" CornerRadius="15" BorderColor="Black" BackgroundColor="Bisque"
+                   Padding="5">
+                    <Image x:Name="img_box" Source="{Binding Photo}" IsVisible="False"/>
+                </Frame>
+                
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center"  Padding="0,30,0,0">
+                    <Button BackgroundColor="Bisque" FontFamily="SourceCodePro-Medium" BorderColor="Black" BorderWidth="1" TextColor="Black" CornerRadius="50" FontSize="11" Text="Добавить" x:Name="buttonAdd" Clicked="ButtonAdd_Clicked"/>
+                    <Button BackgroundColor="Bisque" FontFamily="SourceCodePro-Medium" BorderColor="Black" BorderWidth="1" TextColor="Black" CornerRadius="50" FontSize="11" Text="Удалить" Clicked="buttonDel_Clicked" IsVisible="False" x:Name="buttonDel"/>
+                    <Button BackgroundColor="Bisque" FontFamily="SourceCodePro-Medium" BorderColor="Black" BorderWidth="1" TextColor="Black" CornerRadius="50" FontSize="11" Text="Отмена" Clicked="Cancel"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

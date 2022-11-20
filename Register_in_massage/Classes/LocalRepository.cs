@@ -11,29 +11,53 @@ namespace Register_in_massage
         public LocalRepository(string databasePath)
         {
             database = new SQLiteConnection(databasePath);
-            database.CreateTable<Masseur>();
+            database.CreateTable<BeautySaloon>();
             database.CreateTable<User>();
             database.CreateTable<Appointment>();
         }
-        public int SaveUser(User usr)
+        public void AllClear()
         {
-            return database.Insert(usr);
+            database.DeleteAll<BeautySaloon>();
+            database.DeleteAll<User>();
+            database.DeleteAll<Appointment>();
         }
-        public int SaveMasseur(Masseur ms)
+
+        public int SaveUser(User item)
         {
-            return database.Insert(ms);
+            if (item.Id == 0)
+            {
+                return database.Insert(item);
+            }
+            else
+            {
+                database.Update(item);
+                return item.Id;
+            }
+        }
+        public int SaveBeautySaloon(BeautySaloon item)
+        {
+            if (item.Id == 0)
+            {
+                return database.Insert(item);
+            }
+            else
+            {
+                database.Update(item);
+                return item.Id;
+            }
+            
         }
         public int DeleteUser(int id)
         {
             return database.Delete<User>(id);
         }
-        public int DeleteMasseur(int id)
+        public int DeleteBeautySaloon(int id)
         {
-            return database.Delete<Masseur>(id);
+            return database.Delete<BeautySaloon>(id);
         }
-        public Masseur GetMs(int id)
+        public BeautySaloon GetBeautySaloon(int id)
         {
-            return database.Get<Masseur>(id);
+            return database.Get<BeautySaloon>(id);
         }
         public User GetUs(int id)
         {
@@ -44,17 +68,17 @@ namespace Register_in_massage
         {
             return database.Table<User>().ToList();
         }
-        public List<Masseur> GetMasseurs()
+        public List<BeautySaloon> GetSaloons()
         {
-            return database.Table<Masseur>().ToList();
+            return database.Table<BeautySaloon>().ToList();
         }
 
-        public User GetUser(string num)
+        public User GetUser(int id)
         {
             var user = new User();
             foreach (var item in GetUsers())
             {
-                if (item.Number == num)
+                if (item.Id == id)
                 {
                     user = item;
                 }
@@ -84,47 +108,5 @@ namespace Register_in_massage
         {
             return database.Get<User>(x => x.Number == user.Number && x.Password == user.Password) != null;
         }
-
-        //public Building GetBuildingByProject(Project project)
-        //{
-        //    return database.Get<Building>(x => x.Id == project.BuildId);
-        //}
-        //public bool UserIsCorrect(Minecrafter minecrafter)
-        //{
-        //    return database.Get<Minecrafter>(x => x.Login == minecrafter.Login && x.Password == minecrafter.Password) != null;
-        //}
-
-        //public void AddMinecrafter(Minecrafter minecrafter)
-        //{
-        //    database.Insert(minecrafter);
-        //}
-        //public List<Project> GetProjects()
-        //{
-        //    return database.Table<Project>().ToList();
-        //}
-        //public List<string> GetBuildingTypes()
-        //{
-        //    var types = new List<string>();
-        //    foreach (Project project in GetProjects())
-        //    {
-        //        types.Add(project.BuildType);
-        //    }
-        //    return types.Distinct().ToList();
-        //}
-        //public int AddToFavourites(Project project)
-        //{
-        //    return database.Update(project);
-        //}
-
-        //public List<Building> GetFavourites()
-        //{
-        //    var favProjects = GetProjects().Where(x => x.IsFavourite).ToList();
-        //    var favBuildings = new List<Building>();
-        //    foreach (var project in favProjects)
-        //    {
-        //        favBuildings.Add(GetBuildingByProject(project));
-        //    }
-        //    return favBuildings;
-        //}
     }
 }
