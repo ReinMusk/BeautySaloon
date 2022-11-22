@@ -21,6 +21,8 @@ namespace Register_in_massage
         {
             InitializeComponent();
 
+            Saloon = new BeautySaloon();
+
             title_txt.Text = "Добавить салон красоты";
             this.BindingContext = this;
         }
@@ -50,7 +52,7 @@ namespace Register_in_massage
             try
             {
                 if (txt_AddName.Text != "" &&
-                txt_AddNum.Text != "" &&
+                txt_AddNum.Text.Length == 11 &&
                 txt_AddDesc.Text != "" &&
                 txt_AddAdress.Text != "")
                 {
@@ -78,7 +80,6 @@ namespace Register_in_massage
                 var photo = await MediaPicker.PickPhotoAsync();
                 Saloon.Photo = photo.FullPath;
                 img_box.Source = Saloon.Photo;
-                img_box.IsVisible = true;
             }
             catch (Exception ex)
             {

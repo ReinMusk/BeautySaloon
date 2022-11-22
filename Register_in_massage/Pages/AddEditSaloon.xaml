@@ -24,7 +24,7 @@
 
                 <Frame Margin="40,0,40,30" CornerRadius="15" BorderColor="Black" BackgroundColor="Bisque"
                    Padding="5">
-                    <Editor Text="{Binding Description}" FontFamily="SourceCodePro-Medium" x:Name="txt_AddDesc" Placeholder="Описание" PlaceholderColor="Gray" TextColor="Black"/>
+                    <Editor Text="{Binding Description}" FontFamily="SourceCodePro-Medium" x:Name="txt_AddDesc" Placeholder="Описание" PlaceholderColor="Gray" TextColor="Black" Margin="1"/>
                 </Frame>
 
                 <Frame Margin="40,0,40,30" CornerRadius="15" BorderColor="Black" BackgroundColor="Bisque"
@@ -49,14 +49,14 @@
 
                 <Frame Margin="40,0,40,30" CornerRadius="15" BorderColor="Black" BackgroundColor="Bisque"
                    Padding="5">
-                    <Image x:Name="img_box" Source="{Binding Photo}" IsVisible="False"/>
+                    <Image x:Name="img_box" Source="{Binding Photo}"/>
                 </Frame>
                 
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center"  Padding="0,30,0,0">
-                    <Button BackgroundColor="Bisque" FontFamily="SourceCodePro-Medium" BorderColor="Black" BorderWidth="1" TextColor="Black" CornerRadius="50" FontSize="11" Text="Добавить" x:Name="buttonAdd" Clicked="ButtonAdd_Clicked"/>
-                    <Button BackgroundColor="Bisque" FontFamily="SourceCodePro-Medium" BorderColor="Black" BorderWidth="1" TextColor="Black" CornerRadius="50" FontSize="11" Text="Удалить" Clicked="buttonDel_Clicked" IsVisible="False" x:Name="buttonDel"/>
                     <Button BackgroundColor="Bisque" FontFamily="SourceCodePro-Medium" BorderColor="Black" BorderWidth="1" TextColor="Black" CornerRadius="50" FontSize="11" Text="Отмена" Clicked="Cancel"/>
+                    <Button BackgroundColor="Bisque" FontFamily="SourceCodePro-Medium" BorderColor="Black" BorderWidth="1" TextColor="Black" CornerRadius="50" FontSize="11" Text="Удалить" Clicked="buttonDel_Clicked" IsVisible="False" x:Name="buttonDel"/>
+                    <Button BackgroundColor="Bisque" FontFamily="SourceCodePro-Medium" BorderColor="Black" BorderWidth="1" TextColor="Black" CornerRadius="50" FontSize="11" Text="Добавить" x:Name="buttonAdd" Clicked="ButtonAdd_Clicked"/>
                 </StackLayout>
             </StackLayout>
         </ScrollView>

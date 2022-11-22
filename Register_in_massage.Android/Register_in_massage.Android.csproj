@@ -83,7 +83,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\drawable\logo.ico" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Register_in_massage\Register_in_massage.csproj">
       <Project>{4CAB5B8A-792F-44DD-A191-56E42E97996F}</Project>

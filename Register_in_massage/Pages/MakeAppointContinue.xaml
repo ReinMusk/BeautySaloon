@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Register_in_massage.MakeAppointContinue"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="#D77B0B">
+
+                <Label x:Name="title_txt" FontFamily="SourceCodePro-Medium" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="35" Margin="40" FontAttributes="Bold" />
+
+                <Label Text="Выберите время"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="32" Margin="0"/>
+                <CollectionView ItemsLayout="VerticalGrid, 3"  x:Name="times_lv" ItemsSource="{Binding FreeTimes}" SelectionMode="Single" >
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="10,0,0,0" RowDefinitions="Auto, *" ColumnDefinitions="Auto, *">
+                                <Frame Margin="10" BackgroundColor="Bisque">
+                                    <StackLayout >
+                                        <Label Text="{Binding StringFormat='{0}:00'}" FontFamily="SourceCodePro-Medium" FontAttributes="Bold" FontSize="12" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black"/>
+                                    </StackLayout>
+                                </Frame>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center"  Margin="0,-320,0,0">
+                    <Button BackgroundColor="Bisque" FontFamily="SourceCodePro-Medium" BorderColor="Black" BorderWidth="1" TextColor="Black" CornerRadius="50" FontSize="11" Text="Назад" Clicked="Button_cancel"/>
+                    <Button BackgroundColor="Bisque" FontFamily="SourceCodePro-Medium" BorderColor="Black" BorderWidth="1" TextColor="Black" CornerRadius="50" FontSize="11" Text="Записаться" x:Name="buttonAdd" Clicked="buttonAdd_Clicked"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

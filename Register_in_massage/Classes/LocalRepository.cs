@@ -15,10 +15,8 @@ namespace Register_in_massage
             database.CreateTable<User>();
             database.CreateTable<Appointment>();
         }
-        public void AllClear()
+        public void Clear()
         {
-            database.DeleteAll<BeautySaloon>();
-            database.DeleteAll<User>();
             database.DeleteAll<Appointment>();
         }
 
@@ -50,6 +48,11 @@ namespace Register_in_massage
         public int DeleteUser(int id)
         {
             return database.Delete<User>(id);
+        }
+
+        public int DeleteAppointment(int id)
+        {
+            return database.Delete<Appointment>(id);
         }
         public int DeleteBeautySaloon(int id)
         {

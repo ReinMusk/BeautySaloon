@@ -4,45 +4,43 @@
              x:Class="Register_in_massage.Pages.UserAppointments"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        <!--сделать что бы был один стобец и скролл со всеми массажистами-->
-
         <StackLayout BackgroundColor="#D77B0B">
-            <Label Text="Предстоящие записи"/>
-            <ListView x:Name="projectList1" ItemsSource="{Binding newAppointments}">
-                <ListView.ItemTemplate>
+            
+            <Label Text="Предстоящие записи" FontFamily="SourceCodePro-Medium" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="35" Margin="20" FontAttributes="Bold" />
+            <CollectionView
+                x:Name="times_lv1"
+                ItemsSource="{Binding newAppointments}"
+                SelectionMode="Single" SelectionChanged="times_lv1_SelectionChanged">
+                <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid Padding="10">
-                            <Frame BackgroundColor="White">
-                                <StackLayout Orientation="Horizontal" BackgroundColor="White">
-                                    <Image Source="{Binding Photo}" HeightRequest="100" WidthRequest="100"/>
-                                    <Label Text="{Binding Time}" FontFamily="SourceCodePro-Medium" Margin="13,0,0,0" TextColor="Black" VerticalTextAlignment="Center" FontSize="24" />
-                                    <Label Text="{Binding BeautySaloon.Name}" FontFamily="SourceCodePro-Medium" Margin="13,0,0,0" TextColor="Black" VerticalTextAlignment="Center" FontSize="24" />
-                                    <Label Text="{Binding BeautySaloon.Adress}" FontFamily="SourceCodePro-Medium" Margin="13,0,0,0" TextColor="Black" VerticalTextAlignment="Center" FontSize="24" />
-                                </StackLayout>
+                            <Frame BackgroundColor="Bisque">
+                                <StackLayout >
+                                    <Label Text="{Binding Time}" FontSize="20" FontFamily="SourceCodePro-Medium" HorizontalTextAlignment="Start" TextColor="Black" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+                                 </StackLayout>
                             </Frame>
                         </Grid>
                     </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
 
-            <Label Text="Прошлые записи записи"/>
-            <ListView x:Name="projectList2" ItemsSource="{Binding oldAppointments}">
-                <ListView.ItemTemplate>
+            <Label Text="Прошлые записи" FontFamily="SourceCodePro-Medium" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="35" Margin="20" FontAttributes="Bold" />
+            <CollectionView
+                x:Name="times_lv2"
+                ItemsSource="{Binding oldAppointments}"
+                SelectionMode="Single" SelectionChanged="times_lv2_SelectionChanged">
+                <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid Padding="10">
-                            <Frame BackgroundColor="White">
-                                <StackLayout Orientation="Horizontal" BackgroundColor="White">
-                                    <Image Source="{Binding Photo}" HeightRequest="100" WidthRequest="100"/>
-                                    <Label Text="{Binding Time}" FontFamily="SourceCodePro-Medium" Margin="13,0,0,0" TextColor="Black" VerticalTextAlignment="Center" FontSize="24" />
-                                    <Label Text="{Binding BeautySaloon.Name}" FontFamily="SourceCodePro-Medium" Margin="13,0,0,0" TextColor="Black" VerticalTextAlignment="Center" FontSize="24" />
-                                    <Label Text="{Binding BeautySaloon.Adress}" FontFamily="SourceCodePro-Medium" Margin="13,0,0,0" TextColor="Black" VerticalTextAlignment="Center" FontSize="24" />
+                            <Frame BackgroundColor="Bisque">
+                                <StackLayout >
+                                    <Label Text="{Binding Time}" FontSize="22" FontFamily="SourceCodePro-Medium" HorizontalTextAlignment="Start" TextColor="Black" FontAttributes="Bold" VerticalTextAlignment="Center"/>
                                 </StackLayout>
                             </Frame>
                         </Grid>
                     </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </StackLayout>
-
     </ContentPage.Content>
 </ContentPage>

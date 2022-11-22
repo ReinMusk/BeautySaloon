@@ -59,7 +59,11 @@ namespace Register_in_massage
 
         public static bool IsPhoneNumber(string number)
         {
-            return Regex.Match(number, @"^(\+[0-9]{11})$").Success;
+            if (number.Length == 11)
+            {
+                return Regex.Match(number, "[0 - 9]").Success;
+            }
+            return false;
         }
 
         public static bool IsPassword(string temp)

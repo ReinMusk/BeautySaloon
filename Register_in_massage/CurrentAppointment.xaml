@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Register_in_massage.CurrentAppointment"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="#D77B0B">
+
+                <Label Text="Ваша запись" FontFamily="SourceCodePro-Medium" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="35" Margin="20" FontAttributes="Bold" />
+                <Label x:Name="datetimeL" FontFamily="SourceCodePro-Medium" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="25" Margin="20" FontAttributes="Bold" />
+                <Label x:Name="adressL" FontFamily="SourceCodePro-Medium" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="25" Margin="20" FontAttributes="Bold" />
+                <Label x:Name="nameL" FontFamily="SourceCodePro-Medium" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="25" Margin="20" FontAttributes="Bold" />
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center"  Margin="0,0,0,0">
+                    <Button BackgroundColor="Bisque" FontFamily="SourceCodePro-Medium" BorderColor="Black" BorderWidth="1" TextColor="Black" CornerRadius="50" FontSize="11" Text="Назад" Clicked="Button_cancel"/>
+                    <Button BackgroundColor="Bisque" FontFamily="SourceCodePro-Medium" BorderColor="Black" BorderWidth="1" TextColor="Black" CornerRadius="50" FontSize="11" Text="Удалить запись" Clicked="buttonDel_Clicked"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
