@@ -15,10 +15,6 @@ namespace Register_in_massage
             database.CreateTable<User>();
             database.CreateTable<Appointment>();
         }
-        public void Clear()
-        {
-            database.DeleteAll<Appointment>();
-        }
 
         public int SaveUser(User item)
         {
@@ -45,10 +41,6 @@ namespace Register_in_massage
             }
             
         }
-        public int DeleteUser(int id)
-        {
-            return database.Delete<User>(id);
-        }
 
         public int DeleteAppointment(int id)
         {
@@ -62,10 +54,6 @@ namespace Register_in_massage
         {
             return database.Get<BeautySaloon>(id);
         }
-        public User GetUs(int id)
-        {
-            return database.Get<User>(id);
-        }
 
         public List<User> GetUsers()
         {
@@ -76,22 +64,6 @@ namespace Register_in_massage
             return database.Table<BeautySaloon>().ToList();
         }
 
-        public User GetUser(int id)
-        {
-            var user = new User();
-            foreach (var item in GetUsers())
-            {
-                if (item.Id == id)
-                {
-                    user = item;
-                }
-                else
-                    user = null;
-            }
-
-            return user;
-        }
-
         public int SaveAppointment(Appointment app)
         {
             return database.Insert(app);
@@ -100,11 +72,6 @@ namespace Register_in_massage
         public List<Appointment> GetAllAppointments()
         {
             return database.Table<Appointment>().ToList();
-        }
-
-        public List<Appointment> GetUserAppointments(User user)
-        {
-            return database.Table<Appointment>().Where(x => x.IdUser == user.Id).ToList();
         }
 
         public bool UserIsCorrect(User user)
